@@ -151,6 +151,9 @@ table {
 body {
   background-image: url(image/LoginPage/Background.png);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   font: 13px/24px "poppins";
 }
 
@@ -261,6 +264,10 @@ input[type="submit"]:hover {
 @media (max-width: 768px) {
   .container .sweet img {
     display: none;
+  }
+
+  body {
+    background-position: top left;
   }
 
   .login_form {
