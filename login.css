@@ -158,7 +158,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 900px;
+  min-width: 70%;
   height: 450px;
   position: absolute;
   top: 50%;
@@ -173,6 +173,7 @@ body {
   border-radius: 5px;
   padding: 40px;
   height: 400px;
+  box-shadow: 1px 2px 9px rgba(0, 0, 0, 0.2);
 }
 
 .login_form h1 {
@@ -192,9 +193,9 @@ body {
 
 input[type="text"] {
   box-sizing: border-box;
-  padding: 10px 8px;
+  padding: 10px 15px;
   width: 100%;
-  border-radius: 2px;
+  border-radius: 3px;
   border: none;
   margin-top: 35px;
   box-shadow: 0.8px 1px 5px rgba(0, 0, 0, 0.3);
@@ -202,12 +203,17 @@ input[type="text"] {
 
 input[type="password"] {
   box-sizing: border-box;
-  padding: 10px 8px;
+  padding: 10px 15px;
   width: 100%;
-  border-radius: 2px;
+  border-radius: 3px;
   margin-top: 15px;
   border: none;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input::placeholder {
+  font-size: 13px;
+  color: var(--textxolor);
 }
 
 input:focus {
@@ -237,18 +243,27 @@ input[type="checkbox"] {
 
 input[type="submit"] {
   box-sizing: border-box;
-  padding: 5px 30px;
-  color: var(--maincolor);
+  padding: 7px 40px;
+  color: #fff;
   font-weight: 600;
-  border: 2px solid var(--maincolor);
-  background-color: #fff;
+  border: none;
+  background-color: var(--maincolor);
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 4px 0 var(--maincolor);
 }
 
-input[type="submit"]:active {
-  box-shadow: none;
-  margin-top: 5px;
-  box-sizing: border-box;
+input[type="submit"]:hover {
+  background-color: #426aa7;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+  .container .sweet img {
+    display: none;
+  }
+
+  .login_form {
+    margin: auto;
+  }
 }
